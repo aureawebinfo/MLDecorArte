@@ -4,8 +4,10 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>MLDecorArte - Decoraciones & Floristería de Alta Gama</title>
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap"
       rel="stylesheet"
@@ -14,42 +16,48 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/styles.css" />
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="./js/tailwind-config.js"></script>
-    <style>
-      html { scroll-behavior: smooth; }
-      .glass-panel {
-        background: rgba(255, 255, 255, 0.6);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-      }
-      .dark .glass-panel {
-        background: rgba(17, 24, 39, 0.6);
-      }
-      /* Fix para evitar scroll horizontal en móviles por animaciones */
-      body { overflow-x: hidden; }
-    </style>
   </head>
   <body
     class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-100 font-body transition-colors duration-300"
   >
     <nav
-      class="sticky top-0 z-50 w-full backdrop-blur-xl bg-background-light/90 dark:bg-background-dark/90 border-b border-purple-100 dark:border-purple-900/50 shadow-sm"
+      class="sticky top-0 z-50 w-full backdrop-blur-md bg-background-light/95 dark:bg-background-dark/95 border-b border-purple-100 dark:border-purple-900/50 shadow-sm will-change-scroll"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-24">
           <div class="flex-shrink-0 flex items-center">
-            <span class="font-script text-4xl md:text-5xl text-primary drop-shadow-md cursor-pointer hover:opacity-80 transition relative z-50"
+            <span
+              class="font-script text-4xl md:text-5xl text-primary drop-shadow-md cursor-pointer hover:opacity-80 transition relative z-50"
               >MLDecorArte</span
             >
           </div>
-          
+
           <div class="hidden md:flex space-x-10 items-center">
-            <a class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary transition-colors" href="#home">Inicio</a>
-            <a class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary transition-colors" href="#about">Nosotros</a>
-            <a class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary transition-colors" href="#services">Servicios</a>
-            <a class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary transition-colors" href="#gallery">Galería</a>
-            
+            <a
+              class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
+              href="#home"
+              >Inicio</a
+            >
+            <a
+              class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
+              href="#about"
+              >Nosotros</a
+            >
+            <a
+              class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
+              href="#services"
+              >Servicios</a
+            >
+            <a
+              class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
+              href="#gallery"
+              >Galería</a
+            >
+
             <a
               class="px-8 py-3 rounded-full bg-primary text-white hover:bg-purple-800 transition shadow-lg shadow-purple-500/20 font-bold text-sm tracking-wide"
               href="#contact"
@@ -59,337 +67,640 @@
             <button
               class="p-2 rounded-full text-gray-500 hover:bg-purple-100 dark:hover:bg-purple-900 transition"
               onclick="document.documentElement.classList.toggle('dark')"
+              aria-label="Cambiar tema"
             >
-              <span class="material-symbols-outlined block dark:hidden">dark_mode</span>
-              <span class="material-symbols-outlined hidden dark:block text-yellow-300">light_mode</span>
+              <span class="material-symbols-outlined block dark:hidden"
+                >dark_mode</span
+              >
+              <span
+                class="material-symbols-outlined hidden dark:block text-yellow-300"
+                >light_mode</span
+              >
             </button>
           </div>
 
           <div class="md:hidden flex items-center gap-4">
-             <button
+            <button
               class="p-2 rounded-full text-gray-500 hover:bg-purple-100 dark:hover:bg-purple-900 transition"
               onclick="document.documentElement.classList.toggle('dark')"
             >
-              <span class="material-symbols-outlined block dark:hidden">dark_mode</span>
-              <span class="material-symbols-outlined hidden dark:block text-yellow-300">light_mode</span>
+              <span class="material-symbols-outlined block dark:hidden"
+                >dark_mode</span
+              >
+              <span
+                class="material-symbols-outlined hidden dark:block text-yellow-300"
+                >light_mode</span
+              >
             </button>
-             <button id="mobile-menu-btn" class="text-gray-600 dark:text-gray-300 focus:outline-none">
-                <span class="material-symbols-outlined text-3xl">menu</span>
-             </button>
+            <button
+              id="mobile-menu-btn"
+              class="text-gray-600 dark:text-gray-300 focus:outline-none"
+              aria-label="Abrir menú"
+            >
+              <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
           </div>
         </div>
       </div>
 
-      <div id="mobile-menu" class="hidden md:hidden absolute top-24 left-0 w-full bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-xl border-b border-purple-100 dark:border-purple-900 shadow-xl z-40">
-          <div class="flex flex-col px-4 py-6 space-y-4 text-center">
-            <a class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 py-3 border-b border-gray-100 dark:border-gray-800" href="#home" onclick="toggleMenu()">Inicio</a>
-            <a class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 py-3 border-b border-gray-100 dark:border-gray-800" href="#about" onclick="toggleMenu()">Nosotros</a>
-            <a class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 py-3 border-b border-gray-100 dark:border-gray-800" href="#services" onclick="toggleMenu()">Servicios</a>
-            <a class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 py-3 border-b border-gray-100 dark:border-gray-800" href="#gallery" onclick="toggleMenu()">Galería</a>
-            <a class="mt-4 px-8 py-4 rounded-lg bg-primary text-white font-bold text-sm tracking-wide uppercase" href="#contact" onclick="toggleMenu()">Cotizar Ahora</a>
-          </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden absolute top-24 left-0 w-full bg-surface-light/98 dark:bg-surface-dark/98 border-b border-purple-100 dark:border-purple-900 shadow-xl z-40"
+      >
+        <div class="flex flex-col px-4 py-6 space-y-4 text-center">
+          <a
+            class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 py-3 border-b border-gray-100 dark:border-gray-800"
+            href="#home"
+            onclick="toggleMenu()"
+            >Inicio</a
+          >
+          <a
+            class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 py-3 border-b border-gray-100 dark:border-gray-800"
+            href="#about"
+            onclick="toggleMenu()"
+            >Nosotros</a
+          >
+          <a
+            class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 py-3 border-b border-gray-100 dark:border-gray-800"
+            href="#services"
+            onclick="toggleMenu()"
+            >Servicios</a
+          >
+          <a
+            class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 py-3 border-b border-gray-100 dark:border-gray-800"
+            href="#gallery"
+            onclick="toggleMenu()"
+            >Galería</a
+          >
+          <a
+            class="mt-4 px-8 py-4 rounded-lg bg-primary text-white font-bold text-sm tracking-wide uppercase"
+            href="#contact"
+            onclick="toggleMenu()"
+            >Cotizar Ahora</a
+          >
+        </div>
       </div>
     </nav>
 
     <div class="relative w-full">
-      <div class="absolute bottom-0 left-0 w-px h-full bg-gradient-to-t from-transparent via-purple-400 to-transparent opacity-50 z-20 ml-2 md:ml-6 pointer-events-none"></div>
-      <div class="absolute bottom-0 right-0 w-px h-full bg-gradient-to-t from-transparent via-purple-400 to-transparent opacity-50 z-20 mr-2 md:mr-6 pointer-events-none"></div>
+      <div
+        class="absolute bottom-0 left-0 w-px h-full bg-gradient-to-t from-transparent via-purple-400 to-transparent opacity-50 z-20 ml-2 md:ml-6 pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-0 right-0 w-px h-full bg-gradient-to-t from-transparent via-purple-400 to-transparent opacity-50 z-20 mr-2 md:mr-6 pointer-events-none"
+      ></div>
 
-      <div class="relative max-w-6xl mx-auto min-h-screen px-4 md:px-12 border-x border-dashed border-purple-200 dark:border-purple-900/30 bg-white/30 dark:bg-black/20 backdrop-blur-sm flex flex-col">
-        
-        <div class="absolute -top-10 left-1/2 -translate-x-1/2 z-10 w-64 h-32 md:w-96 md:h-48 opacity-60 pointer-events-none">
-           <svg class="w-full h-full text-primary" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100 80C100 80 80 50 60 60C40 70 50 90 70 90" stroke="currentColor" fill="none" stroke-width="1"></path>
-            <path d="M100 80C100 80 120 50 140 60C160 70 150 90 130 90" stroke="currentColor" fill="none" stroke-width="1"></path>
+      <div
+        class="relative max-w-6xl mx-auto min-h-screen px-4 md:px-12 border-x border-dashed border-purple-200 dark:border-purple-900/30 bg-white/40 dark:bg-black/40 flex flex-col"
+      >
+        <div
+          class="absolute -top-10 left-1/2 -translate-x-1/2 z-10 w-64 h-32 md:w-96 md:h-48 opacity-60 pointer-events-none"
+        >
+          <svg
+            class="w-full h-full text-primary"
+            viewBox="0 0 200 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M100 80C100 80 80 50 60 60C40 70 50 90 70 90"
+              stroke="currentColor"
+              fill="none"
+              stroke-width="1"
+            ></path>
+            <path
+              d="M100 80C100 80 120 50 140 60C160 70 150 90 130 90"
+              stroke="currentColor"
+              fill="none"
+              stroke-width="1"
+            ></path>
           </svg>
         </div>
 
-        <section class="relative z-10 pt-32 pb-24 md:pt-48 md:pb-32 text-center" id="home">
-            <div class="inline-flex items-center justify-center p-1 rounded-full border border-purple-200 dark:border-purple-800 bg-surface-light dark:bg-surface-dark mb-8 animate-fade-in-up">
-              <span class="px-4 py-1 rounded-full bg-purple-100 dark:bg-purple-900 text-primary text-xs font-bold uppercase tracking-wider">Nuevo</span>
-              <span class="px-4 py-1 text-xs font-medium text-gray-600 dark:text-gray-300">Colección de Bodas 2025 Disponible</span>
-            </div>
-            
-            <h1 class="font-script text-6xl sm:text-7xl md:text-9xl text-transparent bg-clip-text bg-gradient-to-br from-purple-700 via-purple-500 to-pink-500 dark:from-purple-300 dark:via-purple-200 dark:to-pink-300 mb-6 drop-shadow-sm leading-tight py-4 px-2">
-              MLDecorArte
-            </h1>
-            
-            <p class="font-display text-lg md:text-2xl text-gray-900 dark:text-white font-light tracking-[0.2em] uppercase mb-8 px-4">
-              Arquitectura Floral & Eventos
-            </p>
-            
-            <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-12 font-light px-4">
-              Transformamos espacios ordinarios en experiencias visuales extraordinarias. 
-              Especialistas en bodas de destino y eventos corporativos de alto impacto.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row justify-center gap-6 px-4">
-              <a class="group relative px-8 py-4 bg-primary text-white rounded-lg overflow-hidden shadow-xl shadow-purple-500/30 transition-all hover:scale-105" href="#contact">
-                <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
-                <span class="relative font-bold tracking-wide">SOLICITAR PRESUPUESTO</span>
-              </a>
-              <a class="px-8 py-4 bg-transparent border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition font-semibold" href="#gallery">
-                Ver Portafolio
-              </a>
-            </div>
+        <section
+          class="relative z-10 pt-32 pb-24 md:pt-48 md:pb-32 text-center"
+          id="home"
+          style="content-visibility: visible"
+        >
+          <div
+            class="inline-flex items-center justify-center p-1 rounded-full border border-purple-200 dark:border-purple-800 bg-surface-light dark:bg-surface-dark mb-8"
+          >
+            <span
+              class="px-4 py-1 rounded-full bg-purple-100 dark:bg-purple-900 text-primary text-xs font-bold uppercase tracking-wider"
+              >Nuevo</span
+            >
+            <span
+              class="px-4 py-1 text-xs font-medium text-gray-600 dark:text-gray-300"
+              >Colección de Bodas 2025 Disponible</span
+            >
+          </div>
+
+          <h1
+            class="font-script text-6xl sm:text-7xl md:text-9xl text-transparent bg-clip-text bg-gradient-to-br from-purple-700 via-purple-500 to-pink-500 dark:from-purple-300 dark:via-purple-200 dark:to-pink-300 mb-6 drop-shadow-sm leading-tight py-4 px-2"
+          >
+            MLDecorArte
+          </h1>
+
+          <p
+            class="font-display text-lg md:text-2xl text-gray-900 dark:text-white font-light tracking-[0.2em] uppercase mb-8 px-4"
+          >
+            Arquitectura Floral & Eventos
+          </p>
+
+          <p
+            class="max-w-2xl mx-auto text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-12 font-light px-4"
+          >
+            Transformamos espacios ordinarios en experiencias visuales
+            extraordinarias. Especialistas en bodas de destino y eventos
+            corporativos de alto impacto.
+          </p>
+
+          <div class="flex flex-col sm:flex-row justify-center gap-6 px-4">
+            <a
+              class="group relative px-8 py-4 bg-primary text-white rounded-lg overflow-hidden shadow-xl shadow-purple-500/30 transition-all hover:scale-105"
+              href="#contact"
+            >
+              <span class="relative font-bold tracking-wide"
+                >SOLICITAR PRESUPUESTO</span
+              >
+            </a>
+            <a
+              class="px-8 py-4 bg-transparent border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition font-semibold"
+              href="#gallery"
+            >
+              Ver Portafolio
+            </a>
+          </div>
         </section>
 
-        <div class="w-full h-px bg-gradient-to-r from-transparent via-purple-200 dark:via-purple-900 to-transparent mb-24"></div>
+        <div
+          class="w-full h-px bg-gradient-to-r from-transparent via-purple-200 dark:via-purple-900 to-transparent mb-24"
+        ></div>
 
         <section class="mb-32 scroll-mt-24 px-4 md:px-0" id="about">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div class="order-2 md:order-1 relative">
-                <div class="aspect-[4/5] rounded-2xl bg-gradient-to-br from-purple-100 to-white dark:from-purple-900/20 dark:to-gray-900 border border-purple-100 dark:border-purple-800/50 p-8 flex items-center justify-center relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
-                    <div class="text-center space-y-12 relative z-10">
-                        <div>
-                            <span class="block text-6xl font-display font-bold text-primary mb-2">10+</span>
-                            <span class="text-sm uppercase tracking-widest text-gray-500">Años de Experiencia</span>
-                        </div>
-                        <div class="w-12 h-px bg-gray-300 mx-auto"></div>
-                        <div>
-                            <span class="block text-6xl font-display font-bold text-gray-800 dark:text-white mb-2">500+</span>
-                            <span class="text-sm uppercase tracking-widest text-gray-500">Eventos Exitosos</span>
-                        </div>
-                    </div>
+              <div
+                class="aspect-[4/5] rounded-2xl bg-gradient-to-br from-purple-100 to-white dark:from-purple-900/20 dark:to-gray-900 border border-purple-100 dark:border-purple-800/50 p-8 flex items-center justify-center relative overflow-hidden"
+              >
+                <div
+                  class="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full"
+                ></div>
+                <div class="text-center space-y-12 relative z-10">
+                  <div>
+                    <span
+                      class="block text-6xl font-display font-bold text-primary mb-2"
+                      >10+</span
+                    >
+                    <span
+                      class="text-sm uppercase tracking-widest text-gray-500"
+                      >Años de Experiencia</span
+                    >
+                  </div>
+                  <div class="w-12 h-px bg-gray-300 mx-auto"></div>
+                  <div>
+                    <span
+                      class="block text-6xl font-display font-bold text-gray-800 dark:text-white mb-2"
+                      >500+</span
+                    >
+                    <span
+                      class="text-sm uppercase tracking-widest text-gray-500"
+                      >Eventos Exitosos</span
+                    >
+                  </div>
                 </div>
+              </div>
             </div>
-            
+
             <div class="order-1 md:order-2 text-left">
-              <h2 class="text-sm font-bold text-primary uppercase tracking-widest mb-4">Nuestra Esencia</h2>
-              <h3 class="font-display text-4xl md:text-5xl text-gray-900 dark:text-white mb-8 leading-tight">
+              <h2
+                class="text-sm font-bold text-primary uppercase tracking-widest mb-4"
+              >
+                Nuestra Esencia
+              </h2>
+              <h3
+                class="font-display text-4xl md:text-5xl text-gray-900 dark:text-white mb-8 leading-tight"
+              >
                 El arte de contar historias a través de las flores.
               </h3>
-              <p class="text-gray-600 dark:text-gray-400 leading-loose text-lg mb-8">
-                En MLDecorArte, no solo ponemos flores en un jarrón. Diseñamos atmósferas. Creemos que la elegancia reside en los detalles y en la calidad botánica superior.
-                <br><br>
-                Nuestro equipo de artesanos florales combina la técnica clásica con tendencias vanguardistas para crear instalaciones que no solo se ven, se sienten.
+              <p
+                class="text-gray-600 dark:text-gray-400 leading-loose text-lg mb-8"
+              >
+                En MLDecorArte, no solo ponemos flores en un jarrón. Diseñamos
+                atmósferas. Creemos que la elegancia reside en los detalles y en
+                la calidad botánica superior.
+                <br /><br />
+                Mayulis Leal es la mente creativa detrás de MLDecorarte.
+                Especialista en decoración de eventos, transforma cada espacio
+                en una experiencia visual elegante, armoniosa y memorable. Su
+                enfoque combina buen gusto, atención al detalle y una
+                comprensión clara de lo que cada cliente desea transmitir,
+                logrando ambientes que no solo se ven bien, sino que se sienten
+                especiales. Cada proyecto es único, diseñado con intención y
+                ejecutado con excelencia.
               </p>
-              <div class="flex items-center gap-4 text-primary font-semibold cursor-pointer group">
-                <span>Conoce al equipo</span>
-                <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
-              </div>
             </div>
           </div>
         </section>
 
         <section class="mb-32 scroll-mt-24 px-4 md:px-0" id="services">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-              <h2 class="font-display text-4xl text-gray-900 dark:text-white mb-4">Servicios Exclusivos</h2>
-              <p class="text-gray-500 dark:text-gray-400 text-lg">Diseño floral integral adaptado a la magnitud de tu visión.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div class="glass-panel p-10 rounded-xl border border-purple-100 dark:border-purple-800/50 hover:border-primary/50 transition duration-500 group hover:-translate-y-2 shadow-sm hover:shadow-2xl hover:shadow-purple-500/10">
-                <div class="w-14 h-14 bg-purple-50 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                  <span class="material-symbols-outlined text-3xl">favorite</span>
-                </div>
-                <h3 class="font-display text-2xl text-gray-900 dark:text-white mb-4">Bodas Signature</h3>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                  Diseño conceptual completo. Desde ramos de novia botánicos hasta estructuras arquitectónicas florales para la ceremonia.
-                </p>
-                <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-500">
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>Ramos & Boutonnieres</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>Centros de mesa</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>Instalaciones aéreas</li>
-                </ul>
-              </div>
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2
+              class="font-display text-4xl text-gray-900 dark:text-white mb-4"
+            >
+              Servicios Exclusivos
+            </h2>
+            <p class="text-gray-500 dark:text-gray-400 text-lg">
+              Diseño floral integral adaptado a la magnitud de tu visión.
+            </p>
+          </div>
 
-              <div class="glass-panel p-10 rounded-xl border border-purple-100 dark:border-purple-800/50 hover:border-primary/50 transition duration-500 group hover:-translate-y-2 shadow-sm hover:shadow-2xl hover:shadow-purple-500/10 relative overflow-hidden">
-                <div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">Más Solicitado</div>
-                <div class="w-14 h-14 bg-purple-50 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                  <span class="material-symbols-outlined text-3xl">business</span>
-                </div>
-                <h3 class="font-display text-2xl text-gray-900 dark:text-white mb-4">Corporativo & Marcas</h3>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                  Elevamos la imagen de su marca en lanzamientos, cenas de gala y decoración de espacios de trabajo.
-                </p>
-                 <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-500">
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>Activaciones de marca</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>Cenas de Gala</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>Lobbies corporativos</li>
-                </ul>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+              class="glass-panel p-10 rounded-xl border border-purple-100 dark:border-purple-800/50 hover:border-primary/50 transition duration-300 group hover:-translate-y-2 shadow-sm"
+            >
+              <div
+                class="w-14 h-14 bg-purple-50 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors duration-300"
+              >
+                <span class="material-symbols-outlined text-3xl">favorite</span>
               </div>
-
-              <div class="glass-panel p-10 rounded-xl border border-purple-100 dark:border-purple-800/50 hover:border-primary/50 transition duration-500 group hover:-translate-y-2 shadow-sm hover:shadow-2xl hover:shadow-purple-500/10">
-                <div class="w-14 h-14 bg-purple-50 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                  <span class="material-symbols-outlined text-3xl">local_florist</span>
-                </div>
-                <h3 class="font-display text-2xl text-gray-900 dark:text-white mb-4">Styling & Social</h3>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                  Detalles curados para aniversarios, cumpleaños VIP y eventos sociales íntimos que requieren un toque de distinción.
-                </p>
-                 <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-500">
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>Decoración de hogar</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>Baby Showers</li>
-                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>Sesiones de fotos</li>
-                </ul>
-              </div>
+              <h3
+                class="font-display text-2xl text-gray-900 dark:text-white mb-4"
+              >
+                Bodas Signature
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                Diseño conceptual completo. Desde ramos de novia botánicos hasta
+                estructuras arquitectónicas.
+              </p>
             </div>
+
+            <div
+              class="glass-panel p-10 rounded-xl border border-purple-100 dark:border-purple-800/50 hover:border-primary/50 transition duration-300 group hover:-translate-y-2 shadow-sm relative overflow-hidden"
+            >
+              <div
+                class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider"
+              >
+                Más Solicitado
+              </div>
+              <div
+                class="w-14 h-14 bg-purple-50 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors duration-300"
+              >
+                <span class="material-symbols-outlined text-3xl">business</span>
+              </div>
+              <h3
+                class="font-display text-2xl text-gray-900 dark:text-white mb-4"
+              >
+                Corporativo
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                Elevamos la imagen de su marca en lanzamientos, cenas de gala y
+                decoración de espacios.
+              </p>
+            </div>
+
+            <div
+              class="glass-panel p-10 rounded-xl border border-purple-100 dark:border-purple-800/50 hover:border-primary/50 transition duration-300 group hover:-translate-y-2 shadow-sm"
+            >
+              <div
+                class="w-14 h-14 bg-purple-50 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors duration-300"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >local_florist</span
+                >
+              </div>
+              <h3
+                class="font-display text-2xl text-gray-900 dark:text-white mb-4"
+              >
+                Styling & Social
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                Detalles curados para aniversarios, cumpleaños VIP y eventos
+                sociales íntimos.
+              </p>
+            </div>
+          </div>
         </section>
 
         <section class="mb-32 scroll-mt-24 px-4 md:px-0" id="gallery">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-200 dark:border-gray-800 pb-6">
-              <div>
-                <h2 class="font-display text-4xl text-gray-900 dark:text-white mb-2">Portfolio Reciente</h2>
-                <p class="text-gray-500">Una selección de nuestros trabajos más icónicos</p>
-              </div>
-              <a href="#" class="hidden md:flex items-center text-primary font-bold hover:text-purple-700 transition mt-4 md:mt-0">
-                VER GALERÍA COMPLETA <span class="material-symbols-outlined ml-2">arrow_forward</span>
-              </a>
+          <div
+            class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-200 dark:border-gray-800 pb-6"
+          >
+            <div>
+              <h2
+                class="font-display text-4xl text-gray-900 dark:text-white mb-2"
+              >
+                Portfolio Reciente
+              </h2>
+              <p class="text-gray-500">
+                Una selección de nuestros trabajos más icónicos
+              </p>
+            </div>
+            <a
+              href="https://www.instagram.com/mldecorarte/?next=%2F"
+              class="hidden md:flex items-center text-primary font-bold hover:text-purple-700 transition mt-4 md:mt-0"
+              target="_blank"
+            >
+              VER INSTAGRAM
+              <span class="material-symbols-outlined ml-2">arrow_forward</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div
+              class="flex justify-center bg-gray-50 dark:bg-gray-800/20 rounded-lg p-2 shadow-inner min-h-[400px]"
+            >
+              <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/DFa2SUMyEmb/"
+                data-instgrm-version="14"
+              ></blockquote>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-               <div class="group relative aspect-[3/4] overflow-hidden rounded-sm cursor-pointer">
-                <img alt="Wedding Arch" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale-[20%] group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcax1FrmK_bHACVBMGbDzwR_CdthQdRAka3vA5-_9mH2k-u23JyymQXouU2BNJ_cWhnDOx1MQ0dJIhB7g4X1pdwlh4TiRdhD3ey8-EZqaqXUllA3jFs-6Pvhp0C3mVpkDtkCCH9AI7iq2NbhEKA26lEgac-nA3nnmo-p3uCOryspSfi2FHTw3luodwhkMP3lNucXxjSRSzC8ZwHw3akNUGpySm1c4MUu4QtbN2wKUlitZFhw8LPgniN9GC_BOUMY83iXzp87x47zg" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-8">
-                  <span class="text-purple-300 text-xs font-bold uppercase tracking-widest mb-2">Boda Exterior</span>
-                  <span class="text-white font-display text-2xl">Jardín Encantado</span>
-                </div>
-              </div>
-              <div class="group relative aspect-[3/4] overflow-hidden rounded-sm cursor-pointer lg:translate-y-12">
-                <img alt="Table Setting" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale-[20%] group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxVeWBtmL4IE9gxwYB9HSqMJQOifM5kHdV--SE8rjmLcEx0csJ2oJmm5maditm7oOwUbsiDftAuLyMVP-qC94bA2p06VawkXiMSGOLrWLaxB_jJDLmAv11uxKr8HXNGGQ2ZNtMPaFVQ2cZezZ8o2PNdNTxTP2UTI5ipV-J8QHc-WwddAPr1XPKn4ZMAtaHzOqhrFmVxqJv3AkAIFfLWMUBSCTPtVtfY-wAEnDmnj7DHmydJutFpvXgq-U2XGCfHcDCTcRUgFrkwEg" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-8">
-                  <span class="text-purple-300 text-xs font-bold uppercase tracking-widest mb-2">Decoración de Mesa</span>
-                  <span class="text-white font-display text-2xl">Cena de Gala</span>
-                </div>
-              </div>
-              <div class="group relative aspect-[3/4] overflow-hidden rounded-sm cursor-pointer">
-                <img alt="Bridal Bouquet" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 grayscale-[20%] group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArPYrHFjcPgMrmWkrqjCioibjr6SIVNZB5H7GBQ2HXEruFz4bt805TAZvjp01qcyQ-uqLHtVLO8T7Frf__phuq0uybHCCyGHwD-wSeIuieJSpoxO1QRnjqsjyGHCz_VXQTnzHwFoPfMyxlsAYA9jnFOfFHO48Sib7UWn6SDyjFws3jnq_5AapCntzd0l1tMgTsamObbzaz6zOIqme-_W_FaooNG5-SXLeX-J_hIzvGfSJVJkp7lAws6oa8j7Ut_7VAAsbRSkmbkT0" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-8">
-                  <span class="text-purple-300 text-xs font-bold uppercase tracking-widest mb-2">Diseño Floral</span>
-                  <span class="text-white font-display text-2xl">Ramos Nupciales</span>
-                </div>
-              </div>
+            <div
+              class="flex justify-center bg-gray-50 dark:bg-gray-800/20 rounded-lg p-2 shadow-inner min-h-[400px] lg:translate-y-12"
+            >
+              <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/DFNtLRqOoVy/"
+                data-instgrm-version="14"
+              ></blockquote>
             </div>
-            <div class="mt-8 md:hidden text-center">
-                 <a href="#" class="text-primary font-bold">VER GALERÍA COMPLETA</a>
+
+            <div
+              class="flex justify-center bg-gray-50 dark:bg-gray-800/20 rounded-lg p-2 shadow-inner min-h-[400px]"
+            >
+              <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/DFLf-Hmy4y2/"
+                data-instgrm-version="14"
+              ></blockquote>
             </div>
+          </div>
+          <div class="mt-8 md:hidden text-center">
+            <a href="#" class="text-primary font-bold">VER GALERÍA COMPLETA</a>
+          </div>
         </section>
 
         <section class="mb-32 scroll-mt-24 px-4 md:px-0" id="contact">
-            <div class="bg-gray-900 rounded-[2rem] p-8 md:p-16 relative overflow-hidden text-white shadow-2xl">
-              <div class="absolute top-0 right-0 w-96 h-96 bg-purple-600/20 rounded-full blur-[100px] pointer-events-none"></div>
-              <div class="absolute bottom-0 left-0 w-64 h-64 bg-pink-600/20 rounded-full blur-[80px] pointer-events-none"></div>
+          <div
+            class="bg-gray-900 rounded-[2rem] p-8 md:p-16 relative overflow-hidden text-white shadow-2xl"
+          >
+            <div
+              class="absolute top-0 right-0 w-96 h-96 bg-purple-600/20 rounded-full pointer-events-none"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 w-64 h-64 bg-pink-600/20 rounded-full pointer-events-none"
+            ></div>
 
-              <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10">
-                <div>
-                  <h2 class="font-display text-4xl md:text-5xl mb-6">Hablemos de tu próximo gran evento</h2>
-                  <p class="text-gray-300 mb-10 text-lg font-light">
-                    Agenda una consulta gratuita con nuestros diseñadores. Responderemos en menos de 24 horas.
-                  </p>
-                  
-                  <div class="space-y-8">
-                     <div class="flex items-start">
-                        <span class="material-symbols-outlined text-purple-400 text-3xl mt-1 mr-4">location_on</span>
-                        <div>
-                            <h4 class="text-lg font-bold">Showroom & Taller</h4>
-                            <p class="text-gray-400">Av. Las Flores 123, Ciudad Jardín<br>Local 4B (Solo con cita previa)</p>
-                        </div>
-                     </div>
-                     <div class="flex items-start">
-                        <span class="material-symbols-outlined text-purple-400 text-3xl mt-1 mr-4">call</span>
-                        <div>
-                            <h4 class="text-lg font-bold">Atención al Cliente</h4>
-                            <p class="text-gray-400 text-lg">+52 (555) 123-4567</p>
-                            <p class="text-purple-400 text-sm mt-1">Lunes a Sábado, 9am - 7pm</p>
-                        </div>
-                     </div>
-                     <div class="flex items-start">
-                        <span class="material-symbols-outlined text-purple-400 text-3xl mt-1 mr-4">mail</span>
-                        <div>
-                            <h4 class="text-lg font-bold">Email</h4>
-                            <p class="text-gray-400">contacto@mldecorarte.com</p>
-                        </div>
-                     </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10">
+              <div>
+                <h2 class="font-display text-4xl md:text-5xl mb-6">
+                  Hablemos de tu próximo gran evento
+                </h2>
+                <p class="text-gray-300 mb-10 text-lg font-light">
+                  Agenda una consulta gratuita con nuestros diseñadores.
+                  Responderemos en menos de 24 horas.
+                </p>
+
+                <div class="space-y-8">
+                  <div class="flex items-start">
+                    <span
+                      class="material-symbols-outlined text-purple-400 text-3xl mt-1 mr-4"
+                      >location_on</span
+                    >
+                    <div>
+                      <h4 class="text-lg font-bold">Showroom & Taller</h4>
+                      <p class="text-gray-400">
+                        Av. Las Flores 123, Ciudad Jardín<br />Local 4B (Solo
+                        con cita previa)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <span
+                      class="material-symbols-outlined text-purple-400 text-3xl mt-1 mr-4"
+                      >call</span
+                    >
+                    <div>
+                      <h4 class="text-lg font-bold">Atención al Cliente</h4>
+                      <p class="text-gray-400 text-lg">+52 (555) 123-4567</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <span
+                      class="material-symbols-outlined text-purple-400 text-3xl mt-1 mr-4"
+                      >mail</span
+                    >
+                    <div>
+                      <h4 class="text-lg font-bold">Email</h4>
+                      <p class="text-gray-400">contacto@mldecorarte.com</p>
+                    </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="bg-white/5 backdrop-blur-md p-8 rounded-xl border border-white/10">
-                  <form class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Nombre</label>
-                            <input class="w-full rounded-lg border-0 bg-white/10 text-white placeholder-gray-500 focus:ring-2 focus:ring-purple-500 transition h-12" placeholder="Tu nombre" type="text" />
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Teléfono</label>
-                            <input class="w-full rounded-lg border-0 bg-white/10 text-white placeholder-gray-500 focus:ring-2 focus:ring-purple-500 transition h-12" placeholder="(555) 000-0000" type="tel" />
-                        </div>
+              <div class="bg-white/5 p-8 rounded-xl border border-white/10">
+                <form class="space-y-6">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label
+                        class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2"
+                        >Nombre</label
+                      >
+                      <input
+                        class="w-full rounded-lg border-0 bg-white/10 text-white placeholder-gray-500 focus:ring-2 focus:ring-purple-500 transition h-12"
+                        placeholder="Tu nombre"
+                        type="text"
+                      />
                     </div>
                     <div>
-                      <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Email Corporativo / Personal</label>
-                      <input class="w-full rounded-lg border-0 bg-white/10 text-white placeholder-gray-500 focus:ring-2 focus:ring-purple-500 transition h-12" placeholder="correo@ejemplo.com" type="email" />
+                      <label
+                        class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2"
+                        >Teléfono</label
+                      >
+                      <input
+                        class="w-full rounded-lg border-0 bg-white/10 text-white placeholder-gray-500 focus:ring-2 focus:ring-purple-500 transition h-12"
+                        placeholder="(555) 000-0000"
+                        type="tel"
+                      />
                     </div>
-                    <div>
-                      <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Tipo de Evento</label>
-                       <select class="w-full rounded-lg border-0 bg-white/10 text-gray-300 focus:ring-2 focus:ring-purple-500 transition h-12">
-                           <option class="bg-gray-800">Boda</option>
-                           <option class="bg-gray-800">Corporativo</option>
-                           <option class="bg-gray-800">Social</option>
-                           <option class="bg-gray-800">Otro</option>
-                       </select>
-                    </div>
-                    <div>
-                      <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Mensaje</label>
-                      <textarea class="w-full rounded-lg border-0 bg-white/10 text-white placeholder-gray-500 focus:ring-2 focus:ring-purple-500 transition" placeholder="Cuéntanos detalles sobre fecha, lugar y estilo..." rows="4"></textarea>
-                    </div>
-                    <button class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-4 px-4 rounded-lg shadow-lg transition transform active:scale-95 uppercase tracking-wide">
-                      Enviar Solicitud
-                    </button>
-                  </form>
-                </div>
+                  </div>
+                  <div>
+                    <label
+                      class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2"
+                      >Email Corporativo / Personal</label
+                    >
+                    <input
+                      class="w-full rounded-lg border-0 bg-white/10 text-white placeholder-gray-500 focus:ring-2 focus:ring-purple-500 transition h-12"
+                      placeholder="correo@ejemplo.com"
+                      type="email"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2"
+                      >Tipo de Evento</label
+                    >
+                    <select
+                      class="w-full rounded-lg border-0 bg-white/10 text-gray-300 focus:ring-2 focus:ring-purple-500 transition h-12"
+                    >
+                      <option class="bg-gray-800">Boda</option>
+                      <option class="bg-gray-800">Corporativo</option>
+                      <option class="bg-gray-800">Social</option>
+                      <option class="bg-gray-800">Otro</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2"
+                      >Mensaje</label
+                    >
+                    <textarea
+                      class="w-full rounded-lg border-0 bg-white/10 text-white placeholder-gray-500 focus:ring-2 focus:ring-purple-500 transition"
+                      placeholder="Cuéntanos detalles sobre fecha, lugar y estilo..."
+                      rows="4"
+                    ></textarea>
+                  </div>
+                  <button
+                    class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-4 px-4 rounded-lg shadow-lg transition transform active:scale-95 uppercase tracking-wide"
+                  >
+                    Enviar Solicitud
+                  </button>
+                </form>
               </div>
             </div>
+          </div>
         </section>
 
-        <footer class="bg-gray-50 dark:bg-[#0f1115] border-t border-gray-200 dark:border-gray-800 pt-16 pb-8 mt-auto w-full">
-            <div class="px-6">
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-                    <div class="col-span-1 md:col-span-2">
-                        <span class="font-script text-4xl text-primary mb-4 block">MLDecorArte</span>
-                        <p class="text-gray-500 dark:text-gray-400 mb-6 max-w-sm leading-relaxed">
-                            Elevando el estándar del diseño floral y la decoración de eventos. Creamos momentos inolvidables con pasión, precisión y belleza natural.
-                        </p>
-                        <div class="flex space-x-4">
-                            <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
-                            </a>
-                            <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465C9.673 2.013 10.03 2 12.315 2zm-1.087 1.777c-2.312 0-2.6.009-3.507.051-.887.04-1.37.194-1.693.32a2.91 2.91 0 00-1.068.696 2.91 2.91 0 00-.696 1.068c-.126.324-.28.806-.32 1.693-.042.91-.051 1.196-.051 3.507s.009 2.6.051 3.507c.04.887.194 1.37.32 1.693a2.91 2.91 0 00.696 1.068 2.91 2.91 0 001.068.696c.324.126.806.28 1.693.32.91.042 1.196.051 3.507.051s2.6-.009 3.507-.051c.887-.04 1.37-.194 1.693-.32a2.91 2.91 0 001.068-.696 2.91 2.91 0 00.696-1.068c.126-.324.28-.806.32-1.693.042-.91.051-1.196.051-3.507s-.009-2.6-.051-3.507c-.04-.887-.194-1.37-.32-1.693a2.91 2.91 0 00-.696-1.068 2.91 2.91 0 00-1.068-.696c-.324-.126-.806-.28-1.693-.32-.91-.042-1.196-.051-3.507-.051zM12.315 7.078a4.922 4.922 0 110 9.844 4.922 4.922 0 010-9.844zm0 1.777a3.145 3.145 0 100 6.29 3.145 3.145 0 000-6.29zm5.33-3.922a1.184 1.184 0 110 2.368 1.184 1.184 0 010-2.368z" clip-rule="evenodd"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-gray-900 dark:text-white font-bold uppercase tracking-wider mb-6 text-sm">Empresa</h3>
-                        <ul class="space-y-3 text-gray-500 dark:text-gray-400 text-sm">
-                            <li><a href="#about" class="hover:text-primary transition">Sobre Nosotros</a></li>
-                            <li><a href="#services" class="hover:text-primary transition">Servicios</a></li>
-                            <li><a href="#gallery" class="hover:text-primary transition">Portfolio</a></li>
-                            <li><a href="#" class="hover:text-primary transition">Trabaja con nosotros</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-gray-900 dark:text-white font-bold uppercase tracking-wider mb-6 text-sm">Servicios</h3>
-                        <ul class="space-y-3 text-gray-500 dark:text-gray-400 text-sm">
-                            <li><a href="#" class="hover:text-primary transition">Bodas</a></li>
-                            <li><a href="#" class="hover:text-primary transition">Eventos Corporativos</a></li>
-                            <li><a href="#" class="hover:text-primary transition">Suscripción Floral</a></li>
-                            <li><a href="#" class="hover:text-primary transition">Decoración de Sets</a></li>
-                        </ul>
-                    </div>
+        <footer
+          class="bg-gray-50 dark:bg-[#0f1115] border-t border-gray-200 dark:border-gray-800 pt-16 pb-8 mt-auto w-full"
+        >
+          <div class="px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+              <div class="col-span-1 md:col-span-2">
+                <span class="font-script text-4xl text-primary mb-4 block"
+                  >MLDecorArte</span
+                >
+                <p
+                  class="text-gray-500 dark:text-gray-400 mb-6 max-w-sm leading-relaxed"
+                >
+                  Elevando el estándar del diseño floral y la decoración de
+                  eventos. Creamos momentos inolvidables con pasión, precisión y
+                  belleza natural.
+                </p>
+                <div class="flex space-x-4">
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465C9.673 2.013 10.03 2 12.315 2zm-1.087 1.777c-2.312 0-2.6.009-3.507.051-.887.04-1.37.194-1.693.32a2.91 2.91 0 00-1.068.696 2.91 2.91 0 00-.696 1.068c-.126.324-.28.806-.32 1.693-.042.91-.051 1.196-.051 3.507s.009 2.6.051 3.507c.04.887.194 1.37.32 1.693a2.91 2.91 0 00.696 1.068 2.91 2.91 0 001.068.696c.324.126.806.28 1.693.32.91.042 1.196.051 3.507.051s2.6-.009 3.507-.051c.887-.04 1.37-.194 1.693-.32a2.91 2.91 0 001.068-.696 2.91 2.91 0 00.696-1.068c.126-.324.28-.806.32-1.693.042-.91.051-1.196.051-3.507s-.009-2.6-.051-3.507c-.04-.887-.194-1.37-.32-1.693a2.91 2.91 0 00-.696-1.068 2.91 2.91 0 00-1.068-.696c-.324-.126-.806-.28-1.693-.32-.91-.042-1.196-.051-3.507-.051zM12.315 7.078a4.922 4.922 0 110 9.844 4.922 4.922 0 010-9.844zm0 1.777a3.145 3.145 0 100 6.29 3.145 3.145 0 000-6.29zm5.33-3.922a1.184 1.184 0 110 2.368 1.184 1.184 0 010-2.368z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </a>
                 </div>
-                
-                <div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 dark:text-gray-400">
-                    <p>© 2024 MLDecorArte. Todos los derechos reservados.</p>
-                    <div class="flex space-x-6 mt-4 md:mt-0">
-                        <a href="#" class="hover:text-gray-900 dark:hover:text-white">Privacidad</a>
-                        <a href="#" class="hover:text-gray-900 dark:hover:text-white">Términos</a>
-                    </div>
-                </div>
+              </div>
+              <div>
+                <h3
+                  class="text-gray-900 dark:text-white font-bold uppercase tracking-wider mb-6 text-sm"
+                >
+                  Empresa
+                </h3>
+                <ul class="space-y-3 text-gray-500 dark:text-gray-400 text-sm">
+                  <li>
+                    <a href="#about" class="hover:text-primary transition"
+                      >Sobre Nosotros</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#services" class="hover:text-primary transition"
+                      >Servicios</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#gallery" class="hover:text-primary transition"
+                      >Portfolio</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary transition"
+                      >Trabaja con nosotros</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3
+                  class="text-gray-900 dark:text-white font-bold uppercase tracking-wider mb-6 text-sm"
+                >
+                  Servicios
+                </h3>
+                <ul class="space-y-3 text-gray-500 dark:text-gray-400 text-sm">
+                  <li>
+                    <a href="#" class="hover:text-primary transition">Bodas</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary transition"
+                      >Eventos Corporativos</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary transition"
+                      >Suscripción Floral</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary transition"
+                      >Decoración de Sets</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
-        </footer>
 
-      </div> </div> <script src="./js/main.js"></script>
+            <div
+              class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 dark:text-gray-400"
+            >
+              <p>© 2024 MLDecorArte. Todos los derechos reservados.</p>
+              <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-gray-900 dark:hover:text-white"
+                  >Privacidad</a
+                >
+                <a href="#" class="hover:text-gray-900 dark:hover:text-white"
+                  >Términos</a
+                >
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+    <script async src="https://www.instagram.com/embed.js"></script>
   </body>
 </html>

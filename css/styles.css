@@ -1,22 +1,55 @@
 ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #1e102e; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #9333ea; 
-            border-radius: 4px;
-        }@keyframes border-glow {
-            0%, 100% { box-shadow: 0 0 15px rgba(147, 51, 234, 0.3), inset 0 0 10px rgba(147, 51, 234, 0.1); }
-            50% { box-shadow: 0 0 25px rgba(147, 51, 234, 0.6), inset 0 0 20px rgba(147, 51, 234, 0.2); }
-        }
-        .arch-glow {
-            animation: border-glow 4s ease-in-out infinite;
-        }
-        .floral-decoration {
-            filter: drop-shadow(0px 0px 5px rgba(147, 51, 234, 0.8));
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1e102e;
+}
+::-webkit-scrollbar-thumb {
+  background: #9333ea;
+  border-radius: 4px;
+}
+@keyframes border-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(147, 51, 234, 0.3),
+      inset 0 0 10px rgba(147, 51, 234, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(147, 51, 234, 0.6),
+      inset 0 0 20px rgba(147, 51, 234, 0.2);
+  }
+}
+.arch-glow {
+  animation: border-glow 4s ease-in-out infinite;
+}
+.floral-decoration {
+  filter: drop-shadow(0px 0px 5px rgba(147, 51, 234, 0.8));
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optimización: Solo aplicar blur donde realmente importa y es pequeño */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  will-change: transform; /* Pista al navegador para optimizar render */
+}
+.dark .glass-panel {
+  background: rgba(30, 16, 46, 0.7);
+}
+
+/* content-visibility evita renderizar cosas fuera de pantalla */
+section {
+  content-visibility: auto;
+  contain-intrinsic-size: 800px; /* Estimado de altura para evitar saltos */
+}
+
+body {
+  overflow-x: hidden;
+}
