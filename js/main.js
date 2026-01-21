@@ -37,3 +37,45 @@ function sendToWhatsapp() {
   const url = `https://wa.me/${phoneNumber}?text=${text}`;
   window.open(url, "_blank");
 }
+
+// Funcionalidad de Modal para Galería
+function openGalleryModal(container) {
+  const modal = document.getElementById("gallery-modal");
+  const modalImg = document.getElementById("modal-img");
+  const clickedImg = container.querySelector("img");
+
+  modalImg.src = clickedImg.src;
+
+  // Mostrar modal con transición
+  modal.classList.remove("hidden");
+  setTimeout(() => {
+    modal.classList.remove("opacity-0");
+    modalImg.classList.remove("scale-95");
+  }, 10);
+
+  // Bloquear scroll del cuerpo
+  document.body.style.overflow = "hidden";
+}
+
+function closeGalleryModal() {
+  const modal = document.getElementById("gallery-modal");
+  const modalImg = document.getElementById("modal-img");
+
+  modal.classList.add("opacity-0");
+  modalImg.classList.add("scale-95");
+
+  setTimeout(() => {
+    modal.classList.add("hidden");
+    document.body.style.overflow = "auto";
+  }, 300);
+}
+
+// Cerrar modal al hacer clic fuera de la imagen
+document.getElementById("gallery-modal").addEventListener("click", (e) => {
+  if (
+    e.target.id === "gallery-modal" ||
+    e.target.parentElement.id === "gallery-modal"
+  ) {
+    closeGalleryModal();
+  }
+});
