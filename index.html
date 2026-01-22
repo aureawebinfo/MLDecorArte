@@ -18,6 +18,8 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
 
+    <link rel="icon" type="image/webp" href="logo.webp" />
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="./js/tailwind-config.js"></script>
   </head>
@@ -427,7 +429,7 @@
               onclick="openGalleryModal(this)"
             >
               <img
-                src="assets/img/img_1.jpg"
+                src="assets/img/img-1.webp"
                 alt="Evento"
                 class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -438,7 +440,7 @@
               onclick="openGalleryModal(this)"
             >
               <img
-                src="assets/img/img_3.jpg"
+                src="assets/img/img-3.webp"
                 alt="Decoración"
                 class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -449,7 +451,7 @@
               onclick="openGalleryModal(this)"
             >
               <img
-                src="assets/img/img_2.jpg"
+                src="assets/img/img-2.webp"
                 alt="Detalle Floral"
                 class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -488,138 +490,142 @@
           </div>
         </div>
 
-        <section class="mb-32 scroll-mt-24 px-4 md:px-0" id="contact">
+        <section class="py-24" id="contact">
           <div
-            class="bg-gray-900 rounded-[2rem] p-8 md:p-16 relative overflow-hidden text-white shadow-2xl"
+            class="bg-surface-light dark:bg-surface-dark rounded-[3rem] p-8 md:p-16 border border-gray-200 dark:border-white/5 relative overflow-hidden"
           >
             <div
-              class="absolute top-0 right-0 w-96 h-96 bg-purple-600/20 rounded-full pointer-events-none"
-            ></div>
-            <div
-              class="absolute bottom-0 left-0 w-64 h-64 bg-pink-600/20 rounded-full pointer-events-none"
+              class="absolute top-0 right-0 w-1/2 h-full bg-primary/5 blur-3xl -z-0"
             ></div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10">
               <div>
-                <h2 class="font-display text-4xl md:text-5xl mb-6">
-                  Hablemos de tu próximo gran evento
+                <h2
+                  class="font-display text-5xl text-gray-900 dark:text-white mb-6"
+                >
+                  Hablemos de tu Próximo Evento
                 </h2>
-                <p class="text-gray-300 mb-10 text-lg font-light">
-                  Agenda una consulta gratuita con nuestros diseñadores.
-                  Responderemos en menos de 24 horas.
+                <p class="text-lg text-gray-600 dark:text-gray-400 mb-12">
+                  Estamos listos para transformar tus espacios. Cuéntanos tu
+                  idea y nuestro equipo de diseño floral se encargará del resto.
                 </p>
 
                 <div class="space-y-8">
-                  <!-- <div class="flex items-start">
-                    <span
-                      class="material-symbols-outlined text-purple-400 text-3xl mt-1 mr-4"
-                      >location_on</span
+                  <div
+                    class="flex items-start gap-6 p-6 rounded-2xl bg-white/50 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-primary/50 transition-colors"
+                  >
+                    <div
+                      class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary"
                     >
+                      <span class="material-symbols-outlined">chat</span>
+                    </div>
                     <div>
-                      <h4 class="text-lg font-bold">Showroom & Taller</h4>
-                      <p class="text-gray-400">
-                        Av. Las Flores 123, Ciudad Jardín<br />Local 4B (Solo
-                        con cita previa)
+                      <h4 class="font-bold text-gray-900 dark:text-white mb-1">
+                        WhatsApp
+                      </h4>
+                      <p class="text-gray-600 dark:text-gray-400">
+                        +57 319 232 6597
                       </p>
                     </div>
-                  </div> -->
-                  <div class="flex items-start">
-                    <span
-                      class="material-symbols-outlined text-purple-400 text-3xl mt-1 mr-4"
-                      >call</span
-                    >
-                    <div>
-                      <h4 class="text-lg font-bold">Atención al Cliente</h4>
-                      <p class="text-gray-400 text-lg">+57 301 195-9402</p>
-                    </div>
                   </div>
-                  <div class="flex items-start">
-                    <span
-                      class="material-symbols-outlined text-purple-400 text-3xl mt-1 mr-4"
-                      >mail</span
+
+                  <div
+                    class="flex items-start gap-6 p-6 rounded-2xl bg-white/50 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-primary/50 transition-colors"
+                  >
+                    <div
+                      class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary"
                     >
+                      <span class="material-symbols-outlined">mail</span>
+                    </div>
                     <div>
-                      <h4 class="text-lg font-bold">Email</h4>
-                      <p class="text-gray-400">mlfloristdecorator@gmail.com</p>
+                      <h4 class="font-bold text-gray-900 dark:text-white mb-1">
+                        Email
+                      </h4>
+                      <p class="text-gray-600 dark:text-gray-400">
+                        mlfloristdecorator@gmail.com
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="bg-white/5 p-8 rounded-xl border border-white/10">
-                <form class="space-y-6" onsubmit="event.preventDefault()">
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div
+                class="bg-white dark:bg-background-dark p-8 md:p-10 rounded-3xl border border-gray-200 dark:border-white/5 shadow-xl shadow-gray-200/50 dark:shadow-none"
+              >
+                <form class="space-y-5">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
                       <label
-                        class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2"
+                        class="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2"
                         >Nombre</label
                       >
                       <input
+                        class="w-full bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:border-primary outline-none transition"
                         id="frm-name"
-                        class="w-full rounded-lg border-0 bg-white/10 text-white placeholder-gray-500 focus:ring-2 focus:ring-purple-500 transition h-12"
                         placeholder="Tu nombre"
                         type="text"
                       />
                     </div>
                     <div>
                       <label
-                        class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2"
+                        class="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2"
                         >Teléfono</label
                       >
                       <input
+                        class="w-full bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:border-primary outline-none transition"
                         id="frm-phone"
-                        class="w-full rounded-lg border-0 bg-white/10 text-white placeholder-gray-500 focus:ring-2 focus:ring-purple-500 transition h-12"
-                        placeholder="(555) 000-0000"
+                        placeholder="+57..."
                         type="tel"
                       />
                     </div>
                   </div>
+
                   <div>
                     <label
-                      class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2"
-                      >Email Corporativo / Personal</label
+                      class="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2"
+                      >Email</label
                     >
                     <input
+                      class="w-full bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:border-primary outline-none transition"
                       id="frm-email"
-                      class="w-full rounded-lg border-0 bg-white/10 text-white placeholder-gray-500 focus:ring-2 focus:ring-purple-500 transition h-12"
-                      placeholder="correo@ejemplo.com"
+                      placeholder="tu@email.com"
                       type="email"
                     />
                   </div>
+
                   <div>
                     <label
-                      class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2"
+                      class="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2"
                       >Tipo de Evento</label
                     >
                     <select
+                      class="w-full bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:border-primary outline-none transition appearance-none"
                       id="frm-type"
-                      class="w-full rounded-lg border-0 bg-white/10 text-gray-300 focus:ring-2 focus:ring-purple-500 transition h-12"
                     >
-                      <option class="bg-gray-800">Boda</option>
-                      <option class="bg-gray-800">Corporativo</option>
-                      <option class="bg-gray-800">Social</option>
-                      <option class="bg-gray-800">Otro</option>
+                      <option value="boda">Boda</option>
+                      <option value="corporativo">Corporativo</option>
+                      <option value="otro">Otro</option>
                     </select>
                   </div>
+
                   <div>
                     <label
-                      class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2"
+                      class="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2"
                       >Mensaje</label
                     >
                     <textarea
+                      class="w-full bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:border-primary outline-none transition h-32 resize-none"
                       id="frm-message"
-                      class="w-full rounded-lg border-0 bg-white/10 text-white placeholder-gray-500 focus:ring-2 focus:ring-purple-500 transition"
-                      placeholder="Cuéntanos detalles sobre fecha, lugar y estilo..."
-                      rows="4"
+                      placeholder="¿En qué podemos ayudarte?"
                     ></textarea>
                   </div>
 
                   <button
-                    type="button"
+                    class="w-full bg-primary hover:bg-purple-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-primary/25"
                     onclick="sendToWhatsapp()"
-                    class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-4 px-4 rounded-lg shadow-lg transition transform active:scale-95 uppercase tracking-wide"
+                    type="button"
                   >
-                    Enviar a WhatsApp
+                    ENVIAR SOLICITUD
                   </button>
                 </form>
               </div>

@@ -64,14 +64,14 @@ body {
 
 body {
   /* Fondo para Tema Claro */
-  background-image: url("../assets/background_light.png");
+  background-image: url("../assets/background-light.webp");
   background-size: auto;
   background-attachment: fixed;
 }
 
 html.dark body {
   /* Fondo para Tema Oscuro */
-  background-image: url("../assets/background_dark.png");
+  background-image: url("../assets/background-dark.webp");
   background-size: auto;
   background-attachment: fixed;
 }

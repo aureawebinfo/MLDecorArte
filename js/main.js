@@ -28,7 +28,7 @@ function sendToWhatsapp() {
   }
 
   // 3. Número de destino (CAMBIAR ESTE NÚMERO POR EL TUYO REAL)
-  const phoneNumber = "573011959402";
+  const phoneNumber = "573192326597";
 
   // 4. Crear mensaje
   const text = `*Nueva Solicitud Web*%0A%0A*Nombre:* ${name}%0A*Tel:* ${phone}%0A*Email:* ${email}%0A*Evento:* ${type}%0A*Mensaje:* ${message}`;
