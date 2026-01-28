@@ -44,20 +44,19 @@ html {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  will-change: transform; /* Pista al navegador para optimizar render */
 }
 .dark .glass-panel {
   background: rgba(30, 16, 46, 0.7);
 }
 
-/* content-visibility evita renderizar cosas fuera de pantalla */
-section {
+/* Eliminamos content-visibility de las secciones principales */
+/* section {
   content-visibility: auto;
-  contain-intrinsic-size: 800px; /* Estimado de altura para evitar saltos */
-}
+  contain-intrinsic-size: 800px;
+} */
 
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; - Eliminamos este parche */
 }
 
 /* --- CONFIGURACIÓN DE FONDOS CON PATRÓN REPETITIVO --- */
@@ -66,12 +65,26 @@ body {
   /* Fondo para Tema Claro */
   background-image: url("../assets/background-light.webp");
   background-size: auto;
-  background-attachment: fixed;
+  background-attachment: scroll; /* Cambiado de fixed a scroll para móvil */
 }
 
 html.dark body {
   /* Fondo para Tema Oscuro */
   background-image: url("../assets/background-dark.webp");
   background-size: auto;
-  background-attachment: fixed;
+  background-attachment: scroll; /* Cambiado de fixed a scroll para móvil */
+}
+
+/* Media query para dispositivos grandes donde sí funciona fixed */
+@media (min-width: 768px) {
+  body,
+  html.dark body {
+    background-attachment: fixed;
+  }
+}
+
+/* Clase para secciones que queremos optimizar (no hero) */
+.lazy-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 400px;
 }

@@ -30,67 +30,69 @@
       class="sticky top-0 z-50 w-full backdrop-blur-md bg-background-light/95 dark:bg-background-dark/95 border-b border-purple-100 dark:border-purple-900/50 shadow-sm will-change-scroll"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-24">
+        <div class="flex justify-between items-center h-16 sm:h-20 md:h-24">
           <div class="flex-shrink-0 flex items-center">
             <span
-              class="font-script text-4xl md:text-5xl text-primary drop-shadow-md cursor-pointer hover:opacity-80 transition relative z-50"
+              class="font-script text-3xl sm:text-4xl md:text-5xl text-primary drop-shadow-md cursor-pointer hover:opacity-80 transition relative z-50"
               >MLDecorArte</span
             >
           </div>
 
-          <div class="hidden md:flex space-x-10 items-center">
+          <div class="hidden md:flex space-x-6 lg:space-x-10 items-center">
             <a
-              class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
+              class="text-xs lg:text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
               href="#home"
               >Inicio</a
             >
             <a
-              class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
+              class="text-xs lg:text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
               href="#about"
               >Nosotros</a
             >
             <a
-              class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
+              class="text-xs lg:text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
               href="#services"
               >Servicios</a
             >
             <a
-              class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
+              class="text-xs lg:text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
               href="#gallery"
               >Galería</a
             >
 
             <a
-              class="px-8 py-3 rounded-full bg-primary text-white hover:bg-purple-800 transition shadow-lg shadow-purple-500/20 font-bold text-sm tracking-wide"
+              class="px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-full bg-primary text-white hover:bg-purple-800 transition shadow-lg shadow-purple-500/20 font-bold text-xs sm:text-sm tracking-wide whitespace-nowrap"
               href="#contact"
             >
               COTIZAR AHORA
             </a>
             <button
-              class="p-2 rounded-full text-gray-500 hover:bg-purple-100 dark:hover:bg-purple-900 transition"
+              class="p-1 sm:p-2 rounded-full text-gray-500 hover:bg-purple-100 dark:hover:bg-purple-900 transition"
               onclick="document.documentElement.classList.toggle('dark')"
               aria-label="Cambiar tema"
             >
-              <span class="material-symbols-outlined block dark:hidden"
+              <span
+                class="material-symbols-outlined block dark:hidden text-lg sm:text-xl"
                 >dark_mode</span
               >
               <span
-                class="material-symbols-outlined hidden dark:block text-yellow-300"
+                class="material-symbols-outlined hidden dark:block text-lg sm:text-xl text-yellow-300"
                 >light_mode</span
               >
             </button>
           </div>
 
-          <div class="md:hidden flex items-center gap-4">
+          <div class="md:hidden flex items-center gap-2 sm:gap-4">
             <button
-              class="p-2 rounded-full text-gray-500 hover:bg-purple-100 dark:hover:bg-purple-900 transition"
+              class="p-1 sm:p-2 rounded-full text-gray-500 hover:bg-purple-100 dark:hover:bg-purple-900 transition"
               onclick="document.documentElement.classList.toggle('dark')"
             >
-              <span class="material-symbols-outlined block dark:hidden"
+              <span
+                class="material-symbols-outlined block dark:hidden text-lg sm:text-xl"
                 >dark_mode</span
               >
               <span
-                class="material-symbols-outlined hidden dark:block text-yellow-300"
+                class="material-symbols-outlined hidden dark:block text-lg sm:text-xl text-yellow-300"
                 >light_mode</span
               >
             </button>
@@ -99,7 +101,9 @@
               class="text-gray-600 dark:text-gray-300 focus:outline-none"
               aria-label="Abrir menú"
             >
-              <span class="material-symbols-outlined text-3xl">menu</span>
+              <span class="material-symbols-outlined text-2xl sm:text-3xl"
+                >menu</span
+              >
             </button>
           </div>
         </div>
@@ -107,9 +111,11 @@
 
       <div
         id="mobile-menu"
-        class="hidden md:hidden absolute top-24 left-0 w-full bg-surface-light/98 dark:bg-surface-dark/98 border-b border-purple-100 dark:border-purple-900 shadow-xl z-40"
+        class="hidden md:hidden absolute top-16 sm:top-20 left-0 w-full bg-surface-light/98 dark:bg-surface-dark/98 border-b border-purple-100 dark:border-purple-900 shadow-xl z-40"
       >
-        <div class="flex flex-col px-4 py-6 space-y-4 text-center">
+        <div
+          class="flex flex-col px-4 py-4 sm:py-6 space-y-2 sm:space-y-4 text-center"
+        >
           <a
             class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 py-3 border-b border-gray-100 dark:border-gray-800"
             href="#home"
@@ -135,7 +141,7 @@
             >Galería</a
           >
           <a
-            class="mt-4 px-8 py-4 rounded-lg bg-primary text-white font-bold text-sm tracking-wide uppercase"
+            class="mt-4 px-6 sm:px-8 py-3 sm:py-4 rounded-lg bg-primary text-white font-bold text-sm tracking-wide uppercase"
             href="#contact"
             onclick="toggleMenu()"
             >Cotizar Ahora</a
@@ -144,19 +150,22 @@
       </div>
     </nav>
 
-    <div class="relative w-full">
+    <div class="relative w-full overflow-hidden">
+      <!-- Líneas verticales: ocultas en móvil -->
       <div
-        class="absolute bottom-0 left-0 w-px h-full bg-gradient-to-t from-transparent via-purple-400 to-transparent opacity-50 z-20 ml-2 md:ml-6 pointer-events-none"
+        class="hidden md:block absolute bottom-0 left-0 w-px h-full bg-gradient-to-t from-transparent via-purple-400 to-transparent opacity-50 z-20 ml-2 md:ml-6 pointer-events-none"
       ></div>
       <div
-        class="absolute bottom-0 right-0 w-px h-full bg-gradient-to-t from-transparent via-purple-400 to-transparent opacity-50 z-20 mr-2 md:mr-6 pointer-events-none"
+        class="hidden md:block absolute bottom-0 right-0 w-px h-full bg-gradient-to-t from-transparent via-purple-400 to-transparent opacity-50 z-20 mr-2 md:mr-6 pointer-events-none"
       ></div>
 
+      <!-- CONTENEDOR PRINCIPAL CORREGIDO -->
       <div
-        class="relative max-w-6xl mx-auto min-h-screen px-4 md:px-12 border-x border-dashed border-purple-200 dark:border-purple-900/30 bg-white/40 dark:bg-black/40 flex flex-col"
+        class="relative mx-auto px-3 sm:px-4 md:px-6 lg:px-12 flex flex-col md:max-w-6xl md:border-x md:border-dashed md:border-purple-200 md:dark:border-purple-900/30 bg-white/40 dark:bg-black/40"
       >
+        <!-- Decoración superior: oculta en móvil -->
         <div
-          class="absolute -top-10 left-1/2 -translate-x-1/2 z-10 w-64 h-32 md:w-96 md:h-48 opacity-60 pointer-events-none"
+          class="hidden md:block absolute -top-8 sm:-top-10 left-1/2 -translate-x-1/2 z-10 w-48 sm:w-64 h-24 sm:h-32 md:w-96 md:h-48 opacity-60 pointer-events-none"
         >
           <svg
             class="w-full h-full text-primary"
@@ -178,45 +187,49 @@
           </svg>
         </div>
 
+        <!-- HERO SECTION - CORREGIDO -->
         <section
-          class="relative z-10 pt-32 pb-24 md:pt-48 md:pb-32 text-center"
+          class="relative z-10 pt-20 sm:pt-28 md:pt-48 pb-12 sm:pb-20 md:pb-32 text-center min-h-[85vh] md:min-h-screen flex flex-col justify-center"
           id="home"
-          style="content-visibility: visible"
         >
           <div
-            class="inline-flex items-center justify-center p-1 rounded-full border border-purple-200 dark:border-purple-800 bg-surface-light dark:bg-surface-dark mb-8"
+            class="inline-flex flex-col sm:flex-row sm:items-center justify-center p-1 rounded-full border border-purple-200 dark:border-purple-800 bg-surface-light dark:bg-surface-dark mb-6 sm:mb-8 mx-2"
           >
             <span
-              class="px-4 py-1 rounded-full bg-purple-100 dark:bg-purple-900 text-primary text-xs font-bold uppercase tracking-wider"
+              class="px-3 sm:px-4 py-1 rounded-full bg-purple-100 dark:bg-purple-900 text-primary text-xs font-bold uppercase tracking-wider mb-1 sm:mb-0"
               >Nuevo</span
             >
             <span
-              class="px-4 py-1 text-xs font-medium text-gray-600 dark:text-gray-300"
+              class="px-3 sm:px-4 py-1 text-xs font-medium text-gray-600 dark:text-gray-300 text-center"
               >Colección de Bodas 2025 Disponible</span
             >
           </div>
+
+          <!-- Título principal optimizado para móvil -->
           <h1
-            class="font-script text-6xl sm:text-7xl md:text-9xl text-transparent bg-clip-text bg-gradient-to-br from-purple-700 via-purple-500 to-pink-500 dark:from-purple-300 dark:via-purple-200 dark:to-pink-300 mb-6 drop-shadow-sm leading-tight py-4 px-2"
+            class="font-script text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-transparent bg-clip-text bg-gradient-to-br from-purple-700 via-purple-500 to-pink-500 dark:from-purple-300 dark:via-purple-200 dark:to-pink-300 mb-4 sm:mb-6 drop-shadow-sm leading-[1.1] py-2 sm:py-4 px-2"
           >
             MLDecorArte
           </h1>
 
           <p
-            class="font-display text-lg md:text-2xl text-gray-900 dark:text-white font-light tracking-[0.2em] uppercase mb-8 px-4"
+            class="font-display text-sm sm:text-base md:text-lg lg:text-xl text-gray-900 dark:text-white font-light tracking-[0.05em] sm:tracking-[0.2em] uppercase mb-6 sm:mb-8 px-2 sm:px-4"
           >
             Arquitectura Floral & Eventos
           </p>
           <p
-            class="max-w-2xl mx-auto text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-12 font-light px-4"
+            class="max-w-2xl mx-auto text-gray-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed mb-8 sm:mb-12 font-light px-2 sm:px-4"
           >
             Transformamos espacios ordinarios en experiencias visuales
             extraordinarias. Especialistas en bodas de destino y eventos
             corporativos de alto impacto.
           </p>
 
-          <div class="flex flex-col sm:flex-row justify-center gap-6 px-4">
+          <div
+            class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 px-2 sm:px-4"
+          >
             <a
-              class="group relative px-8 py-4 bg-primary text-white rounded-lg overflow-hidden shadow-xl shadow-purple-500/30 transition-all hover:scale-105"
+              class="group relative px-6 sm:px-8 py-3 sm:py-4 bg-primary text-white rounded-lg overflow-hidden shadow-xl shadow-purple-500/30 transition-all hover:scale-105 text-sm sm:text-base"
               href="#contact"
             >
               <span class="relative font-bold tracking-wide"
@@ -224,7 +237,7 @@
               >
             </a>
             <a
-              class="px-8 py-4 bg-transparent border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition font-semibold"
+              class="px-6 sm:px-8 py-3 sm:py-4 bg-transparent border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition font-semibold text-sm sm:text-base"
               href="https://www.instagram.com/mldecorarte/"
             >
               Ver Portafolio
@@ -233,37 +246,40 @@
         </section>
 
         <div
-          class="w-full h-px bg-gradient-to-r from-transparent via-purple-200 dark:via-purple-900 to-transparent mb-24"
+          class="w-full h-px bg-gradient-to-r from-transparent via-purple-200 dark:via-purple-900 to-transparent mb-16 sm:mb-24"
         ></div>
 
-        <section class="mb-32 scroll-mt-24 px-4 md:px-0" id="about">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <!-- Aplicamos lazy loading a las secciones siguientes -->
+        <section
+          class="mb-20 sm:mb-32 scroll-mt-24 px-2 sm:px-4 md:px-0 lazy-section"
+          id="about"
+        >
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-16 items-center"
+          >
             <div class="order-2 md:order-1 relative">
               <div
-                class="aspect-[4/5] rounded-2xl bg-gradient-to-br from-purple-100 to-white dark:from-purple-900/20 dark:to-gray-900 border border-purple-100 dark:border-purple-800/50 p-8 flex items-center justify-center relative overflow-hidden"
+                class="aspect-[4/5] rounded-2xl bg-gradient-to-br from-purple-100 to-white dark:from-purple-900/20 dark:to-gray-900 border border-purple-100 dark:border-purple-800/50 p-6 sm:p-8 flex items-center justify-center relative overflow-hidden"
               >
-                <!-- <div
-                  class="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full"
-                ></div> -->
-                <div class="text-center space-y-12 relative z-10">
+                <div class="text-center space-y-8 sm:space-y-12 relative z-10">
                   <div>
                     <span
-                      class="block text-6xl font-display font-bold text-primary mb-2"
+                      class="block text-4xl sm:text-5xl md:text-6xl font-display font-bold text-primary mb-2"
                       >10+</span
                     >
                     <span
-                      class="text-sm uppercase tracking-widest text-gray-500"
+                      class="text-xs sm:text-sm uppercase tracking-widest text-gray-500"
                       >Años de Experiencia</span
                     >
                   </div>
                   <div class="w-12 h-px bg-gray-300 mx-auto"></div>
                   <div>
                     <span
-                      class="block text-6xl font-display font-bold text-gray-800 dark:text-white mb-2"
+                      class="block text-4xl sm:text-5xl md:text-6xl font-display font-bold text-gray-800 dark:text-white mb-2"
                       >500+</span
                     >
                     <span
-                      class="text-sm uppercase tracking-widest text-gray-500"
+                      class="text-xs sm:text-sm uppercase tracking-widest text-gray-500"
                       >Eventos Exitosos</span
                     >
                   </div>
@@ -273,17 +289,17 @@
 
             <div class="order-1 md:order-2 text-left">
               <h2
-                class="text-sm font-bold text-primary uppercase tracking-widest mb-4"
+                class="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest mb-3 sm:mb-4"
               >
                 Nuestra Esencia
               </h2>
               <h3
-                class="font-display text-4xl md:text-5xl text-gray-900 dark:text-white mb-8 leading-tight"
+                class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-6 sm:mb-8 leading-tight"
               >
                 El arte de contar historias a través de las flores.
               </h3>
               <p
-                class="text-gray-600 dark:text-gray-400 leading-loose text-lg mb-8"
+                class="text-gray-600 dark:text-gray-400 leading-loose text-base sm:text-lg mb-6 sm:mb-8"
               >
                 En MLDecorArte, no solo ponemos flores en un jarrón. Diseñamos
                 atmósferas. Creemos que la elegancia reside en los detalles y en
@@ -302,88 +318,101 @@
           </div>
         </section>
 
-        <section class="mb-32 scroll-mt-24 px-4 md:px-0" id="services">
-          <div class="text-center max-w-3xl mx-auto mb-16">
+        <section
+          class="mb-20 sm:mb-32 scroll-mt-24 px-2 sm:px-4 md:px-0 lazy-section"
+          id="services"
+        >
+          <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
             <h2
-              class="font-display text-4xl text-gray-900 dark:text-white mb-4"
+              class="font-display text-2xl sm:text-3xl md:text-4xl text-gray-900 dark:text-white mb-3 sm:mb-4"
             >
               Servicios Exclusivos
             </h2>
-            <p class="text-gray-500 dark:text-gray-400 text-lg">
+            <p class="text-gray-500 dark:text-gray-400 text-base sm:text-lg">
               Diseño floral integral adaptado a la magnitud de tu visión.
             </p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             <div
-              class="glass-panel p-10 rounded-xl border border-purple-100 dark:border-purple-800/50 hover:border-primary/50 transition duration-300 group hover:-translate-y-2 shadow-sm"
+              class="glass-panel p-6 sm:p-8 md:p-10 rounded-xl border border-purple-100 dark:border-purple-800/50 hover:border-primary/50 transition duration-300 group hover:-translate-y-2 shadow-sm"
             >
               <div
-                class="w-14 h-14 bg-purple-50 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors duration-300"
+                class="w-12 h-12 sm:w-14 sm:h-14 bg-purple-50 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-6 sm:mb-8 group-hover:bg-primary group-hover:text-white transition-colors duration-300"
               >
-                <span class="material-symbols-outlined text-3xl">business</span>
+                <span class="material-symbols-outlined text-2xl sm:text-3xl"
+                  >business</span
+                >
               </div>
               <h3
-                class="font-display text-2xl text-gray-900 dark:text-white mb-4"
+                class="font-display text-xl sm:text-2xl text-gray-900 dark:text-white mb-3 sm:mb-4"
               >
                 Corporativo
               </h3>
-              <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+              <p
+                class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base mb-4 sm:mb-6"
+              >
                 Elevamos la imagen de su marca en lanzamientos, cenas de gala y
                 decoración de espacios.
               </p>
             </div>
 
             <div
-              class="glass-panel p-10 rounded-xl border border-purple-100 dark:border-purple-800/50 hover:border-primary/50 transition duration-300 group hover:-translate-y-2 shadow-sm relative overflow-hidden"
+              class="glass-panel p-6 sm:p-8 md:p-10 rounded-xl border border-purple-100 dark:border-purple-800/50 hover:border-primary/50 transition duration-300 group hover:-translate-y-2 shadow-sm relative overflow-hidden"
             >
               <div
-                class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider"
+                class="absolute top-0 right-0 bg-primary text-white text-[9px] sm:text-[10px] font-bold px-2 sm:px-3 py-1 rounded-bl-lg uppercase tracking-wider"
               >
                 Más Solicitado
               </div>
               <div
-                class="w-14 h-14 bg-purple-50 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors duration-300"
+                class="w-12 h-12 sm:w-14 sm:h-14 bg-purple-50 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-6 sm:mb-8 group-hover:bg-primary group-hover:text-white transition-colors duration-300"
               >
-                <span class="material-symbols-outlined text-3xl">favorite</span>
+                <span class="material-symbols-outlined text-2xl sm:text-3xl"
+                  >favorite</span
+                >
               </div>
               <h3
-                class="font-display text-2xl text-gray-900 dark:text-white mb-4"
+                class="font-display text-xl sm:text-2xl text-gray-900 dark:text-white mb-3 sm:mb-4"
               >
                 Bodas Signature
               </h3>
-              <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+              <p
+                class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base mb-4 sm:mb-6"
+              >
                 Diseño conceptual completo. Desde ramos de novia botánicos hasta
                 estructuras arquitectónicas.
               </p>
             </div>
 
             <div
-              class="glass-panel p-10 rounded-xl border border-purple-100 dark:border-purple-800/50 hover:border-primary/50 transition duration-300 group hover:-translate-y-2 shadow-sm"
+              class="glass-panel p-6 sm:p-8 md:p-10 rounded-xl border border-purple-100 dark:border-purple-800/50 hover:border-primary/50 transition duration-300 group hover:-translate-y-2 shadow-sm"
             >
               <div
-                class="w-14 h-14 bg-purple-50 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors duration-300"
+                class="w-12 h-12 sm:w-14 sm:h-14 bg-purple-50 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-6 sm:mb-8 group-hover:bg-primary group-hover:text-white transition-colors duration-300"
               >
-                <span class="material-symbols-outlined text-3xl"
+                <span class="material-symbols-outlined text-2xl sm:text-3xl"
                   >local_florist</span
                 >
               </div>
               <h3
-                class="font-display text-2xl text-gray-900 dark:text-white mb-4"
+                class="font-display text-xl sm:text-2xl text-gray-900 dark:text-white mb-3 sm:mb-4"
               >
                 Styling & Social
               </h3>
-              <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+              <p
+                class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base mb-4 sm:mb-6"
+              >
                 Detalles curados para aniversarios, cumpleaños VIP y eventos
                 sociales íntimos.
               </p>
             </div>
           </div>
           <div
-            class="mt-16 flex flex-col sm:flex-row justify-center gap-6 px-4"
+            class="mt-10 sm:mt-16 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 px-2 sm:px-4"
           >
             <a
-              class="group relative px-8 py-4 bg-primary text-white rounded-lg overflow-hidden shadow-xl shadow-purple-500/30 transition-all hover:scale-105"
+              class="group relative px-6 sm:px-8 py-3 sm:py-4 bg-primary text-white rounded-lg overflow-hidden shadow-xl shadow-purple-500/30 transition-all hover:scale-105 text-sm sm:text-base"
               href="#contact"
             >
               <span class="relative font-bold tracking-wide"
@@ -391,7 +420,7 @@
               >
             </a>
             <a
-              class="px-8 py-4 bg-transparent border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition font-semibold"
+              class="px-6 sm:px-8 py-3 sm:py-4 bg-transparent border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition font-semibold text-sm sm:text-base"
               href="https://www.instagram.com/mldecorarte/"
             >
               Ver Portafolio
@@ -399,33 +428,40 @@
           </div>
         </section>
 
-        <section class="mb-32 scroll-mt-24 px-4 md:px-0" id="gallery">
+        <section
+          class="mb-20 sm:mb-32 scroll-mt-24 px-2 sm:px-4 md:px-0 lazy-section"
+          id="gallery"
+        >
           <div
-            class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-200 dark:border-gray-800 pb-6"
+            class="flex flex-col md:flex-row justify-between items-end mb-8 sm:mb-12 border-b border-gray-200 dark:border-gray-800 pb-4 sm:pb-6"
           >
-            <div>
+            <div class="mb-4 md:mb-0">
               <h2
-                class="font-display text-4xl text-gray-900 dark:text-white mb-2"
+                class="font-display text-2xl sm:text-3xl md:text-4xl text-gray-900 dark:text-white mb-1 sm:mb-2"
               >
                 Portfolio Reciente
               </h2>
-              <p class="text-gray-500">
+              <p class="text-gray-500 text-sm sm:text-base">
                 Una selección de nuestros trabajos más icónicos
               </p>
             </div>
             <a
               href="https://www.instagram.com/mldecorarte/"
-              class="hidden md:flex items-center text-primary font-bold hover:text-purple-700 transition"
+              class="hidden md:flex items-center text-primary font-bold hover:text-purple-700 transition text-sm sm:text-base"
               target="_blank"
             >
               VER INSTAGRAM
-              <span class="material-symbols-outlined ml-2">arrow_forward</span>
+              <span class="material-symbols-outlined ml-1 sm:ml-2"
+                >arrow_forward</span
+              >
             </a>
           </div>
 
-          <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+          <div
+            class="columns-1 sm:columns-2 lg:columns-3 gap-4 sm:gap-6 space-y-4 sm:space-y-6"
+          >
             <div
-              class="break-inside-avoid overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 group cursor-pointer shadow-md mb-6"
+              class="break-inside-avoid overflow-hidden rounded-xl sm:rounded-2xl bg-gray-100 dark:bg-gray-800 group cursor-pointer shadow-md mb-4 sm:mb-6"
               onclick="openGalleryModal(this)"
             >
               <img
@@ -436,7 +472,7 @@
             </div>
 
             <div
-              class="break-inside-avoid overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 group cursor-pointer shadow-md mb-6"
+              class="break-inside-avoid overflow-hidden rounded-xl sm:rounded-2xl bg-gray-100 dark:bg-gray-800 group cursor-pointer shadow-md mb-4 sm:mb-6"
               onclick="openGalleryModal(this)"
             >
               <img
@@ -447,7 +483,7 @@
             </div>
 
             <div
-              class="break-inside-avoid overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 group cursor-pointer shadow-md mb-6"
+              class="break-inside-avoid overflow-hidden rounded-xl sm:rounded-2xl bg-gray-100 dark:bg-gray-800 group cursor-pointer shadow-md mb-4 sm:mb-6"
               onclick="openGalleryModal(this)"
             >
               <img
@@ -458,10 +494,10 @@
             </div>
           </div>
 
-          <div class="mt-12 md:hidden text-center">
+          <div class="mt-8 sm:mt-12 md:hidden text-center">
             <a
               href="https://www.instagram.com/mldecorarte/"
-              class="text-primary font-bold"
+              class="text-primary font-bold text-sm sm:text-base"
               target="_blank"
               >VER GALERÍA EN INSTAGRAM</a
             >
@@ -470,13 +506,15 @@
 
         <div
           id="gallery-modal"
-          class="fixed inset-0 z-[200] hidden bg-black/95 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity duration-300 opacity-0"
+          class="fixed inset-0 z-[200] hidden bg-black/95 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4 transition-opacity duration-300 opacity-0"
         >
           <button
             onclick="closeGalleryModal()"
-            class="absolute top-6 right-6 text-white hover:text-primary transition-colors z-[210]"
+            class="absolute top-4 sm:top-6 right-4 sm:right-6 text-white hover:text-primary transition-colors z-[210]"
           >
-            <span class="material-symbols-outlined text-4xl">close</span>
+            <span class="material-symbols-outlined text-3xl sm:text-4xl"
+              >close</span
+            >
           </button>
           <div
             class="relative max-w-5xl w-full h-full flex items-center justify-center"
@@ -490,59 +528,80 @@
           </div>
         </div>
 
-        <section class="py-24" id="contact">
+        <section
+          class="py-8 sm:py-12 md:py-24 px-2 sm:px-4 md:px-0 lazy-section"
+          id="contact"
+        >
           <div
-            class="bg-surface-light dark:bg-surface-dark rounded-[3rem] p-8 md:p-16 border border-gray-200 dark:border-white/5 relative overflow-hidden"
+            class="bg-surface-light dark:bg-surface-dark rounded-2xl sm:rounded-3xl md:rounded-[4rem] p-4 sm:p-6 md:p-16 border border-gray-200 dark:border-white/5 relative overflow-hidden"
           >
             <div
-              class="absolute top-0 right-0 w-1/2 h-full bg-primary/5 blur-3xl -z-0"
+              class="hidden md:block absolute top-0 right-0 w-1/2 h-full bg-primary/5 blur-3xl -z-0"
             ></div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10">
+            <div
+              class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-16 relative z-10"
+            >
               <div>
                 <h2
-                  class="font-display text-5xl text-gray-900 dark:text-white mb-6"
+                  class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-3 sm:mb-4 md:mb-6"
                 >
                   Hablemos de tu Próximo Evento
                 </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-400 mb-12">
+                <p
+                  class="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 md:mb-12"
+                >
                   Estamos listos para transformar tus espacios. Cuéntanos tu
-                  idea y nuestro equipo de diseño floral se encargará del resto.
+                  idea y nuestro equipo se encargará del resto.
                 </p>
 
-                <div class="space-y-8">
+                <div class="space-y-3 sm:space-y-4 md:space-y-8">
                   <div
-                    class="flex items-start gap-6 p-6 rounded-2xl bg-white/50 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-primary/50 transition-colors"
+                    class="flex items-center gap-3 sm:gap-4 md:gap-6 p-3 sm:p-4 md:p-6 rounded-xl sm:rounded-2xl bg-white/50 dark:bg-white/5 border border-gray-200 dark:border-white/10"
                   >
                     <div
-                      class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary"
+                      class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-primary/10 rounded-lg sm:rounded-xl flex items-center justify-center text-primary shrink-0"
                     >
-                      <span class="material-symbols-outlined">chat</span>
+                      <span
+                        class="material-symbols-outlined text-lg sm:text-xl md:text-2xl"
+                        >chat</span
+                      >
                     </div>
-                    <div>
-                      <h4 class="font-bold text-gray-900 dark:text-white mb-1">
+                    <div class="overflow-hidden">
+                      <h4
+                        class="font-bold text-gray-900 dark:text-white text-xs sm:text-sm md:text-base mb-1"
+                      >
                         WhatsApp
                       </h4>
-                      <p class="text-gray-600 dark:text-gray-400">
-                        +57 319 232 6597
+                      <p
+                        class="text-gray-600 dark:text-gray-400 text-xs sm:text-sm md:text-base truncate"
+                      >
+                        +57 301 195 9402
                       </p>
                     </div>
                   </div>
 
                   <div
-                    class="flex items-start gap-6 p-6 rounded-2xl bg-white/50 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-primary/50 transition-colors"
+                    class="flex items-center gap-3 sm:gap-4 md:gap-6 p-3 sm:p-4 md:p-6 rounded-xl sm:rounded-2xl bg-white/50 dark:bg-white/5 border border-gray-200 dark:border-white/10"
                   >
                     <div
-                      class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary"
+                      class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-primary/10 rounded-lg sm:rounded-xl flex items-center justify-center text-primary shrink-0"
                     >
-                      <span class="material-symbols-outlined">mail</span>
+                      <span
+                        class="material-symbols-outlined text-lg sm:text-xl md:text-2xl"
+                        >mail</span
+                      >
                     </div>
-                    <div>
-                      <h4 class="font-bold text-gray-900 dark:text-white mb-1">
+                    <div class="overflow-hidden">
+                      <h4
+                        class="font-bold text-gray-900 dark:text-white text-xs sm:text-sm md:text-base mb-1"
+                      >
                         Email
                       </h4>
-                      <p class="text-gray-600 dark:text-gray-400">
-                        mlfloristdecorator@gmail.com
+                      <p
+                        class="text-gray-600 dark:text-gray-400 text-xs sm:text-sm md:text-base truncate"
+                      >
+                        contacto@mldecorarte.com
                       </p>
                     </div>
                   </div>
@@ -550,17 +609,19 @@
               </div>
 
               <div
-                class="bg-white dark:bg-background-dark p-8 md:p-10 rounded-3xl border border-gray-200 dark:border-white/5 shadow-xl shadow-gray-200/50 dark:shadow-none"
+                class="bg-white dark:bg-background-dark p-4 sm:p-6 md:p-10 rounded-xl sm:rounded-2xl md:rounded-3xl border border-gray-200 dark:border-white/5 shadow-xl shadow-gray-200/50 dark:shadow-none"
               >
-                <form class="space-y-5">
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <form class="space-y-3 sm:space-y-4 md:space-y-5">
+                  <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-5"
+                  >
                     <div>
                       <label
-                        class="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2"
+                        class="block text-xs font-medium text-gray-600 dark:text-gray-400 mb-1.5"
                         >Nombre</label
                       >
                       <input
-                        class="w-full bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:border-primary outline-none transition"
+                        class="w-full bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-white/10 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm md:text-base text-gray-900 dark:text-white outline-none"
                         id="frm-name"
                         placeholder="Tu nombre"
                         type="text"
@@ -568,11 +629,11 @@
                     </div>
                     <div>
                       <label
-                        class="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2"
+                        class="block text-xs font-medium text-gray-600 dark:text-gray-400 mb-1.5"
                         >Teléfono</label
                       >
                       <input
-                        class="w-full bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:border-primary outline-none transition"
+                        class="w-full bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-white/10 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm md:text-base text-gray-900 dark:text-white outline-none"
                         id="frm-phone"
                         placeholder="+57..."
                         type="tel"
@@ -582,11 +643,11 @@
 
                   <div>
                     <label
-                      class="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2"
+                      class="block text-xs font-medium text-gray-600 dark:text-gray-400 mb-1.5"
                       >Email</label
                     >
                     <input
-                      class="w-full bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:border-primary outline-none transition"
+                      class="w-full bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-white/10 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm md:text-base text-gray-900 dark:text-white outline-none"
                       id="frm-email"
                       placeholder="tu@email.com"
                       type="email"
@@ -595,11 +656,11 @@
 
                   <div>
                     <label
-                      class="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2"
+                      class="block text-xs font-medium text-gray-600 dark:text-gray-400 mb-1.5"
                       >Tipo de Evento</label
                     >
                     <select
-                      class="w-full bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:border-primary outline-none transition appearance-none"
+                      class="w-full bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-white/10 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm md:text-base text-gray-900 dark:text-white outline-none"
                       id="frm-type"
                     >
                       <option value="boda">Boda</option>
@@ -610,18 +671,18 @@
 
                   <div>
                     <label
-                      class="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2"
+                      class="block text-xs font-medium text-gray-600 dark:text-gray-400 mb-1.5"
                       >Mensaje</label
                     >
                     <textarea
-                      class="w-full bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:border-primary outline-none transition h-32 resize-none"
+                      class="w-full bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-white/10 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm md:text-base text-gray-900 dark:text-white outline-none h-20 sm:h-24 md:h-32 resize-none"
                       id="frm-message"
-                      placeholder="¿En qué podemos ayudarte?"
+                      placeholder="¿Cómo podemos ayudarte?"
                     ></textarea>
                   </div>
 
                   <button
-                    class="w-full bg-primary hover:bg-purple-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-primary/25"
+                    class="w-full bg-primary hover:bg-purple-700 text-white font-bold py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl transition-all shadow-lg text-sm md:text-base"
                     onclick="sendToWhatsapp()"
                     type="button"
                   >
@@ -634,28 +695,31 @@
         </section>
 
         <footer
-          class="border-t border-gray-200 dark:border-gray-800 pt-16 pb-8 mt-auto w-full"
+          class="border-t border-gray-200 dark:border-gray-800 pt-8 sm:pt-12 md:pt-16 pb-6 sm:pb-8 mt-auto w-full lazy-section"
         >
-          <div class="px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+          <div class="px-3 sm:px-6">
+            <div
+              class="grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-10 md:gap-12 mb-10 sm:mb-16"
+            >
               <div class="col-span-1 md:col-span-2">
-                <span class="font-script text-4xl text-primary mb-4 block"
+                <span
+                  class="font-script text-3xl sm:text-4xl text-primary mb-3 sm:mb-4 block"
                   >MLDecorArte</span
                 >
                 <p
-                  class="text-gray-500 dark:text-gray-400 mb-6 max-w-sm leading-relaxed"
+                  class="text-gray-500 dark:text-gray-400 mb-4 sm:mb-6 max-w-sm leading-relaxed text-sm sm:text-base"
                 >
                   Elevando el estándar del diseño floral y la decoración de
                   eventos. Creamos momentos inolvidables con pasión, precisión y
                   belleza natural.
                 </p>
-                <div class="flex space-x-4">
+                <div class="flex space-x-3 sm:space-x-4">
                   <a
                     href="https://www.tiktok.com/@mldecorarte?lang=es"
-                    class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition"
+                    class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition"
                   >
                     <svg
-                      class="w-5 h-5"
+                      class="w-4 h-4 sm:w-5 sm:h-5"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       aria-hidden="true"
@@ -667,10 +731,10 @@
                   </a>
                   <a
                     href="https://www.instagram.com/mldecorarte/"
-                    class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition"
+                    class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition"
                   >
                     <svg
-                      class="w-5 h-5"
+                      class="w-4 h-4 sm:w-5 sm:h-5"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       aria-hidden="true"
@@ -686,11 +750,13 @@
               </div>
               <div>
                 <h3
-                  class="text-gray-900 dark:text-white font-bold uppercase tracking-wider mb-6 text-sm"
+                  class="text-gray-900 dark:text-white font-bold uppercase tracking-wider mb-4 sm:mb-6 text-xs sm:text-sm"
                 >
                   Empresa
                 </h3>
-                <ul class="space-y-3 text-gray-500 dark:text-gray-400 text-sm">
+                <ul
+                  class="space-y-2 sm:space-y-3 text-gray-500 dark:text-gray-400 text-xs sm:text-sm"
+                >
                   <li>
                     <a href="#about" class="hover:text-primary transition"
                       >Sobre Nosotros</a
@@ -715,11 +781,13 @@
               </div>
               <div>
                 <h3
-                  class="text-gray-900 dark:text-white font-bold uppercase tracking-wider mb-6 text-sm"
+                  class="text-gray-900 dark:text-white font-bold uppercase tracking-wider mb-4 sm:mb-6 text-xs sm:text-sm"
                 >
                   Servicios
                 </h3>
-                <ul class="space-y-3 text-gray-500 dark:text-gray-400 text-sm">
+                <ul
+                  class="space-y-2 sm:space-y-3 text-gray-500 dark:text-gray-400 text-xs sm:text-sm"
+                >
                   <li>
                     <a href="#" class="hover:text-primary transition">Bodas</a>
                   </li>
@@ -743,9 +811,9 @@
             </div>
 
             <div
-              class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-center items-center text-sm text-gray-500 dark:text-gray-400"
+              class="border-t border-gray-200 dark:border-gray-800 pt-6 sm:pt-8 flex flex-col md:flex-row justify-center items-center text-xs sm:text-sm text-gray-500 dark:text-gray-400"
             >
-              <p>
+              <p class="text-center">
                 © 2024 MLDecorArte. Todos los derechos reservados. | Pagina
                 desarrollada por
                 <a
@@ -759,15 +827,17 @@
           </div>
         </footer>
       </div>
+
+      <!-- Botón de WhatsApp -->
       <a
         href="https://wa.me/573011959402"
         target="_blank"
         rel="noopener noreferrer"
-        class="fixed bottom-6 right-6 z-[100] flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-full shadow-[0_10px_25px_-5px_rgba(168,85,247,0.4)] transition-all duration-300 hover:scale-110 active:scale-95 hover:shadow-[0_20px_35px_-5px_rgba(168,85,247,0.5)] group"
+        class="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-[100] flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-full shadow-[0_10px_25px_-5px_rgba(168,85,247,0.4)] transition-all duration-300 hover:scale-110 active:scale-95 hover:shadow-[0_20px_35px_-5px_rgba(168,85,247,0.5)] group"
         aria-label="Contactar por WhatsApp"
       >
         <svg
-          class="w-8 h-8 drop-shadow-sm"
+          class="w-6 h-6 sm:w-8 sm:h-8 drop-shadow-sm"
           fill="currentColor"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
